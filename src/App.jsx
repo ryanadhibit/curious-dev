@@ -16,6 +16,9 @@ function App() {
           <li>
             <Link to='/date'>Date</Link>
           </li>
+          <li>
+            <Link to='/hospital'>Hospital</Link>
+          </li>
         </ul>
       </nav>
       <Suspense fallback={<></>}>
