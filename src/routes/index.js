@@ -12,6 +12,14 @@ const routes = [
     exact: true,
     isPrivate: false,
   },
+  {
+    path: '/date',
+    component: lazy(() =>
+      import(/* webpackPrefetch: true */ '../pages/DatePicker')
+    ),
+    exact: true,
+    isPrivate: false,
+  },
 ];
 
 export default routes;
