@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
 
 export default function Hospital() {
