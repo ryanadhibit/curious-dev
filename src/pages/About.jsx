@@ -53,21 +53,34 @@ export default function About() {
               pad={{ horizontal: 'large', top: 'large' }}
             >
               <Text size='16px' style={{ marginBottom: '.5rem' }}>
-                {agreement.intro.id}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </Text>
               <Text size='14px' style={{ fontStyle: 'italic' }}>
-                {agreement.intro.en}
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </Text>
               <ol>
-                {agreement.terms.map((item, index) => (
-                  <li key={index}>
-                    <Text size='16px'>{item.desc.id}</Text>
-                    <br />
-                    <Text size='14px' style={{ fontStyle: 'italic' }}>
-                      {item.desc.en}
-                    </Text>
-                  </li>
-                ))}
+                <li>
+                  <Text size='16px'>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </Text>
+                  <br />
+                  <Text size='14px' style={{ fontStyle: 'italic' }}>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </Text>
+                </li>{' '}
+                <li>
+                  <Text size='16px'>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </Text>
+                  <br />
+                  <Text size='14px' style={{ fontStyle: 'italic' }}>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </Text>
+                </li>
               </ol>
               <CheckBox
                 // checked={checked}
