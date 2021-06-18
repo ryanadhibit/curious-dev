@@ -1,5 +1,111 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Box, Button, Layer as Dialog, Text, CheckBox } from 'grommet';
+import { FormClose } from 'grommet-icons';
+import agreement from '../constant/agreement';
 
 export default function About() {
-  return <div>this is ABOUT page</div>;
+  const [isOpen, setIsOpen] = useState(true);
+  return (
+    <div>
+      <h1>this is about page</h1>
+      <button onClick={() => setIsOpen(true)}>open dialog</button>
+      {isOpen && (
+        <Dialog
+          position='center'
+          animation='slide'
+          onClickOutside={() => setIsOpen(false)}
+          onEsc={() => setIsOpen(false)}
+          responsive={false}
+          full='horizontal'
+          margin={{ vertical: '36px' }}
+        >
+          <Box
+            overflow='auto'
+            fill
+            round='medium'
+            align='start'
+            justify='start'
+            background='white'
+            style={{ position: 'relative' }}
+          >
+            <Box
+              pad={{ horizontal: 'medium' }}
+              fill='horizontal'
+              round={{ corner: 'top', size: 'medium' }}
+              background='white'
+              flex={false}
+              style={{
+                position: 'fixed',
+                top: '0',
+                alignItems: 'flex-end',
+              }}
+            >
+              <FormClose
+                color='status-critical'
+                size='large'
+                onClick={() => setIsOpen(false)}
+                style={{ cursor: 'pointer' }}
+              />
+            </Box>
+            <Box
+              flex={false}
+              margin={{ top: '36px' }}
+              pad={{ horizontal: 'large', top: 'large' }}
+            >
+              <Text size='16px' style={{ marginBottom: '.5rem' }}>
+                {agreement.intro.id}
+              </Text>
+              <Text size='14px' style={{ fontStyle: 'italic' }}>
+                {agreement.intro.en}
+              </Text>
+              <ol>
+                {agreement.terms.map((item, index) => (
+                  <li key={index}>
+                    <Text size='16px'>{item.desc.id}</Text>
+                    <br />
+                    <Text size='14px' style={{ fontStyle: 'italic' }}>
+                      {item.desc.en}
+                    </Text>
+                  </li>
+                ))}
+              </ol>
+              <CheckBox
+                // checked={checked}
+                // onChange={onClickCheck}
+                label={
+                  <Box>
+                    <Text
+                      size='16px'
+                      style={{ lineHeight: '1.5rem', marginBottom: '0.5rem' }}
+                    >
+                      {agreement.check.id}
+                    </Text>
+                    <Text
+                      size='14px'
+                      style={{ lineHeight: '1.5rem', fontStyle: 'italic' }}
+                    >
+                      {agreement.check.en}
+                    </Text>
+                  </Box>
+                }
+              />
+            </Box>
+            <Box
+              width='100%'
+              flex={false}
+              pad={{ horizontal: 'large', bottom: 'medium' }}
+            >
+              <Button
+                primary
+                // disabled={status === 'loading' || !checked}
+                margin={{ top: '36px' }}
+                label='Kirim'
+                // onClick={onSubmit}
+              />
+            </Box>
+          </Box>
+        </Dialog>
+      )}
+    </div>
+  );
 }
