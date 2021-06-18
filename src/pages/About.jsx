@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-import { Box, Button, Layer as Dialog, Text, CheckBox } from 'grommet';
-import { FormClose } from 'grommet-icons';
-import agreement from '../constant/agreement';
+import {
+  // Box,
+  // Button,
+  Layer as Dialog,
+  // Text,
+  // CheckBox
+} from 'grommet';
+// import { FormClose } from 'grommet-icons';
+// import agreement from '../constant/agreement';
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(true);
