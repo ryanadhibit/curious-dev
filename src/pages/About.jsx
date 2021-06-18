@@ -26,7 +26,7 @@ export default function About() {
             align='start'
             justify='start'
             background='white'
-            style={{ position: 'relative' }}
+            // style={{ position: 'relative' }}
           >
             <Box
               pad={{ horizontal: 'medium' }}
@@ -59,6 +59,28 @@ export default function About() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit
               </Text>
               <ol>
+                <li>
+                  <Text size='16px'>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </Text>
+                  <br />
+                  <Text size='14px' style={{ fontStyle: 'italic' }}>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </Text>
+                </li>{' '}
+                <li>
+                  <Text size='16px'>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </Text>
+                  <br />
+                  <Text size='14px' style={{ fontStyle: 'italic' }}>
+                    sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+                  </Text>
+                </li>
                 <li>
                   <Text size='16px'>
                     sed do eiusmod tempor incididunt ut labore et dolore magna
