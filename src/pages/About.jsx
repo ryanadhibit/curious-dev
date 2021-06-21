@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
-import { Box, Button, Layer as Dialog, Text, CheckBox } from 'grommet';
-import { FormClose } from 'grommet-icons';
+import {
+  Box,
+  // Button,
+  Layer as Dialog,
+  Text,
+  // CheckBox
+} from 'grommet';
+// import { FormClose } from 'grommet-icons';
 // import agreement from '../constant/agreement';
 
 const agreement = {
@@ -64,6 +70,30 @@ export default function About() {
           style={{ borderRadius: '12px' }}
         >
           <Box
+            flex={false}
+            margin={{ top: '36px' }}
+            pad={{ horizontal: 'large', top: 'large' }}
+          >
+            <Text size='16px' style={{ marginBottom: '.5rem' }}>
+              {agreement.intro.id}
+            </Text>
+            <Text size='14px' style={{ fontStyle: 'italic' }}>
+              {agreement.intro.en}
+            </Text>
+            <ol>
+              {agreement.terms.map((item, index) => (
+                <li key={index}>
+                  <Text size='16px'>{item.desc.id}</Text>
+                  <br />
+                  <Text size='14px' style={{ fontStyle: 'italic' }}>
+                    {item.desc.en}
+                  </Text>
+                </li>
+              ))}
+            </ol>
+          </Box>
+
+          {/* <Box
             overflow='auto'
             fill
             round='medium'
@@ -92,12 +122,12 @@ export default function About() {
                 onClick={() => setIsOpen(false)}
                 style={{ cursor: 'pointer' }}
               />
-            </Box>
-            <Box
+            </Box> */}
+          {/* <Box
               flex={false}
               margin={{ top: '36px' }}
               pad={{ horizontal: 'large', top: 'large' }}
-              style={{ position: 'relative' }}
+              // style={{ position: 'relative' }}
             >
               <Text size='16px' style={{ marginBottom: '.5rem' }}>
                 {agreement.intro.id}
@@ -150,7 +180,7 @@ export default function About() {
                 // onClick={onSubmit}
               />
             </Box>
-          </Box>
+          </Box> */}
         </Dialog>
       )}
     </div>

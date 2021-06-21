@@ -2391,11 +2391,6 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
-"@wessberg/pointer-events@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@wessberg/pointer-events/-/pointer-events-1.0.9.tgz#9591f2326e3592cdfa52d630217b97ecf7c5d817"
-  integrity sha512-fTOBNzakyi3wBXMmQ1mpAibU3lCbXVWSwgM9nsjtlfbJ5MH1yvteCZgZF+TDQWNtTPg8JWuQUjBF7+8cKoj92A==
-
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -8450,11 +8445,6 @@ pbkdf2@^3.0.3:
     ripemd160 "^2.0.1"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
-
-pepjs@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/pepjs/-/pepjs-0.5.3.tgz#dc755f03d965c20e4b1bb65e42a03a97c382cfc7"
-  integrity sha512-5yHVB9OHqKd9fr/OIsn8ss0NgThQ9buaqrEuwr9Or5YjPp6h+WTDKWZI+xZLaBGZCtODTnFtlSHNmhFsq67THg==
 
 performance-now@^2.1.0:
   version "2.1.0"

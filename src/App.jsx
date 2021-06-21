@@ -24,7 +24,7 @@ function App() {
           </ul>
         </nav>
         <Heading size='large' color='#00739D'>
-          I've Mastered Grommet! wessberg / pointer-events
+          I've Mastered Grommet! hardcode
         </Heading>
         <Suspense fallback={<></>}>
           <Switch>
