@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Button,
-  Layer as Dialog,
-  Text,
-  // CheckBox
-} from 'grommet';
+import { Box, Button, Layer as Dialog, Text, CheckBox } from 'grommet';
 import { FormClose } from 'grommet-icons';
 // import agreement from '../constant/agreement';
 
@@ -54,6 +48,7 @@ const agreement = {
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(true);
+  const [checked, setChecked] = useState(false);
   return (
     <div>
       <h1>this is about page</h1>
@@ -84,6 +79,9 @@ export default function About() {
                 style={{ cursor: 'pointer' }}
               />
               <Text size='16px' style={{ marginBottom: '.5rem' }}>
+                {JSON.stringify(checked)}
+              </Text>
+              <Text size='16px' style={{ marginBottom: '.5rem' }}>
                 {agreement.intro.id}
               </Text>
               <Text size='14px' style={{ fontStyle: 'italic' }}>
@@ -100,6 +98,28 @@ export default function About() {
                   </li>
                 ))}
               </ol>
+            </Box>
+            <Box width='100%' flex={false}>
+              <CheckBox
+                checked={checked}
+                onChange={() => setChecked(true)}
+                label={
+                  <Box>
+                    <Text
+                      size='16px'
+                      style={{ lineHeight: '1.5rem', marginBottom: '0.5rem' }}
+                    >
+                      {agreement.check.id}
+                    </Text>
+                    <Text
+                      size='14px'
+                      style={{ lineHeight: '1.5rem', fontStyle: 'italic' }}
+                    >
+                      {agreement.check.en}
+                    </Text>
+                  </Box>
+                }
+              />
             </Box>
             <Box
               width='100%'
