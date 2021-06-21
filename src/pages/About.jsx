@@ -61,6 +61,7 @@ export default function About() {
           responsive={false}
           full='horizontal'
           margin={{ vertical: '36px' }}
+          style={{ borderRadius: '12px' }}
         >
           <Box
             overflow='auto'
@@ -81,6 +82,8 @@ export default function About() {
                 position: 'fixed',
                 top: '0',
                 alignItems: 'flex-end',
+                background: 'blue',
+                zIndex: '10',
               }}
             >
               <FormClose
@@ -94,6 +97,7 @@ export default function About() {
               flex={false}
               margin={{ top: '36px' }}
               pad={{ horizontal: 'large', top: 'large' }}
+              style={{ position: 'relative' }}
             >
               <Text size='16px' style={{ marginBottom: '.5rem' }}>
                 {agreement.intro.id}
