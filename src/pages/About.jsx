@@ -78,7 +78,7 @@ export default function About() {
               style={{ cursor: 'pointer', alignSelf: 'flex-end' }}
             />
           </Box>
-          <Box overflow='auto'>
+          <Box overflow='auto' flex={false} height='360px'>
             <Text size='16px' style={{ marginBottom: '.5rem' }}>
               {JSON.stringify(checked)}
             </Text>
