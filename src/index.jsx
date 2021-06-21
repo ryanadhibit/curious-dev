@@ -1,5 +1,6 @@
 import 'react-app-polyfill/ie9';
 import 'core-js/stable';
+import 'pepjs';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
