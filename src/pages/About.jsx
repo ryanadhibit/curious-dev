@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   Box,
-  // Button,
+  Button,
   Layer as Dialog,
   Text,
   // CheckBox
@@ -67,38 +67,54 @@ export default function About() {
           responsive={false}
           full='horizontal'
           margin={{ vertical: '36px' }}
-          style={{ borderRadius: '12px' }}
+          // style={{ borderRadius: '12px' }}
+          // overflow='auto'
         >
-          <Box
-            flex={false}
-            // margin={{ top: '36px' }}
-            pad={{ horizontal: 'large', top: 'large' }}
-          >
-            <FormClose
-              color='status-critical'
-              size='large'
-              onClick={() => setIsOpen(false)}
-              style={{ cursor: 'pointer' }}
-            />
-            <Text size='16px' style={{ marginBottom: '.5rem' }}>
-              {agreement.intro.id}
-            </Text>
-            <Text size='14px' style={{ fontStyle: 'italic' }}>
-              {agreement.intro.en}
-            </Text>
-            <ol>
-              {agreement.terms.map((item, index) => (
-                <li key={index}>
-                  <Text size='16px'>{item.desc.id}</Text>
-                  <br />
-                  <Text size='14px' style={{ fontStyle: 'italic' }}>
-                    {item.desc.en}
-                  </Text>
-                </li>
-              ))}
-            </ol>
+          <Box overflow='auto'>
+            <Box
+              flex={false}
+              // margin={{ top: '36px' }}
+              pad={{ horizontal: 'large', top: 'large' }}
+              // overflow='scroll'
+            >
+              <FormClose
+                color='status-critical'
+                size='large'
+                onClick={() => setIsOpen(false)}
+                style={{ cursor: 'pointer' }}
+              />
+              <Text size='16px' style={{ marginBottom: '.5rem' }}>
+                {agreement.intro.id}
+              </Text>
+              <Text size='14px' style={{ fontStyle: 'italic' }}>
+                {agreement.intro.en}
+              </Text>
+              <ol>
+                {agreement.terms.map((item, index) => (
+                  <li key={index}>
+                    <Text size='16px'>{item.desc.id}</Text>
+                    <br />
+                    <Text size='14px' style={{ fontStyle: 'italic' }}>
+                      {item.desc.en}
+                    </Text>
+                  </li>
+                ))}
+              </ol>
+            </Box>
+            <Box
+              width='100%'
+              flex={false}
+              pad={{ horizontal: 'large', bottom: 'medium' }}
+            >
+              <Button
+                primary
+                // disabled={status === 'loading' || !checked}
+                margin={{ top: '36px' }}
+                label='Kirim'
+                onClick={() => console.log('klik')}
+              />
+            </Box>
           </Box>
-
           {/* <Box
             overflow='auto'
             fill
