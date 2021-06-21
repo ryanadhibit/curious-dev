@@ -75,7 +75,7 @@ export default function About() {
               color='status-critical'
               size='large'
               onClick={() => setIsOpen(false)}
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: 'pointer', alignSelf: 'flex-end' }}
             />
           </Box>
           <Box overflow='auto'>
