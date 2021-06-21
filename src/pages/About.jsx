@@ -6,7 +6,7 @@ import {
   Text,
   // CheckBox
 } from 'grommet';
-// import { FormClose } from 'grommet-icons';
+import { FormClose } from 'grommet-icons';
 // import agreement from '../constant/agreement';
 
 const agreement = {
@@ -71,9 +71,15 @@ export default function About() {
         >
           <Box
             flex={false}
-            margin={{ top: '36px' }}
+            // margin={{ top: '36px' }}
             pad={{ horizontal: 'large', top: 'large' }}
           >
+            <FormClose
+              color='status-critical'
+              size='large'
+              onClick={() => setIsOpen(false)}
+              style={{ cursor: 'pointer' }}
+            />
             <Text size='16px' style={{ marginBottom: '.5rem' }}>
               {agreement.intro.id}
             </Text>
