@@ -1,6 +1,6 @@
 // import reactPolymer from 'react-polymer'
-import 'react-app-polyfill/ie9';
-import 'core-js/stable';
+// import 'react-app-polyfill/ie9';
+// import 'core-js/stable';
 // import 'pepjs';
 // import '@wessberg/pointer-events';
 
