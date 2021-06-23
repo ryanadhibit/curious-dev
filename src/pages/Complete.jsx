@@ -1,16 +1,11 @@
-// import React, { useRef, useState, useLayoutEffect } from 'react';
-import React from 'react';
+import React, { useRef, useState, useLayoutEffect } from 'react';
+// import React from 'react';
 // import Skeleton from "react-loading-skeleton";
-import {
-  Box,
-  ResponsiveContext,
-  Text,
-  //  Button
-} from 'grommet';
+import { Box, ResponsiveContext, Text, Button } from 'grommet';
 import Barcode from 'react-barcode';
 // import { useSelector } from "react-redux";
 // import moment from "moment";
-// import html2canvas from "html2canvas";
+import html2canvas from 'html2canvas';
 
 // components
 // import AppBar from '../components/AppBar';
@@ -26,8 +21,8 @@ import Barcode from 'react-barcode';
 export default function Complete() {
   //   const form = useForm();
   //   const answer = useSelector((state) => state.answer);
-  //   const [divHeight, setDivHeight] = useState(0);
-  //   const [divWidth, setDivWidth] = useState(0);
+  const [divHeight, setDivHeight] = useState(0);
+  const [divWidth, setDivWidth] = useState(0);
   //   const [stepperHeight, setStepperHeight] = useState(0);
   //   const [isSafari] = useState(
   //     /constructor/i.test(window.HTMLElement) ||
@@ -38,29 +33,29 @@ export default function Complete() {
   //           (typeof safari !== 'undefined' && window['safari'].pushNotification)
   //       )
   //   );
-  //   const divRef = useRef(null);
-  //   const stepperRef = useRef(null);
+  const divRef = useRef(null);
+  // const stepperRef = useRef(null);
 
-  //   useLayoutEffect(() => {
-  //     setDivHeight(divRef.current.clientHeight);
-  //     setDivWidth(divRef.current.clientWidth);
-  //     setStepperHeight(stepperRef.current.clientHeight);
-  //   }, []);
+  useLayoutEffect(() => {
+    setDivHeight(divRef.current.clientHeight);
+    setDivWidth(divRef.current.clientWidth);
+    //   setStepperHeight(stepperRef.current.clientHeight);
+  }, []);
 
-  //   const saveAsImage = () => {
-  //     window.scrollTo(0, 0);
-  //     const input = document.getElementById("to-save");
-  //     html2canvas(input, {
-  //       width: divWidth,
-  //       height: divHeight + stepperHeight,
-  //       scrollY: -window.scrollY,
-  //     }).then((canvas) => {
-  //       let link = document.createElement("a");
-  //       link.href = canvas.toDataURL();
-  //       link.download = "COVID-19_vaccine_by_Siloam_Hospitals.png";
-  //       link.click();
-  //     });
-  //   };
+  const saveAsImage = () => {
+    window.scrollTo(0, 0);
+    const input = document.getElementById('to-save');
+    html2canvas(input, {
+      width: divWidth,
+      height: divHeight,
+      scrollY: -window.scrollY,
+    }).then((canvas) => {
+      let link = document.createElement('a');
+      link.href = canvas.toDataURL();
+      link.download = 'COVID-19_vaccine_by_Siloam_Hospitals.png';
+      link.click();
+    });
+  };
 
   return (
     <ResponsiveContext.Consumer>
@@ -87,7 +82,7 @@ export default function Complete() {
               flex={false}
               className='content'
               id='to-save'
-              //   ref={divRef}
+              ref={divRef}
               //   pad={{
               //     horizontal: size === 'small' ? '16px' : 'large',
               //     top: `${stepperHeight + 8}px`,
@@ -203,6 +198,12 @@ export default function Complete() {
                 />
               </Box>
             </Box>
+            <Button
+              style={{ width: size === 'small' ? '100%' : '270px' }}
+              primary
+              onClick={saveAsImage}
+              label='Simpan dokumen ini'
+            />
             {/* <Box
               pad={size === 'small' ? '16px' : 'large'}
               flex={false}
