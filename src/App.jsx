@@ -21,6 +21,9 @@ function App() {
             <li>
               <Link to='/hospital'>Hospital</Link>
             </li>
+            <li>
+              <Link to='/complete'>Complete</Link>
+            </li>
           </ul>
         </nav>
         <Heading size='large' color='#00739D'>

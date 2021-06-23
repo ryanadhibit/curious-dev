@@ -28,6 +28,14 @@ const routes = [
     exact: true,
     isPrivate: false,
   },
+  {
+    path: '/complete',
+    component: lazy(() =>
+      import(/* webpackPrefetch: true */ '../pages/Complete')
+    ),
+    exact: true,
+    isPrivate: false,
+  },
 ];
 
 export default routes;
