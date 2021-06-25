@@ -27,7 +27,7 @@ function App() {
           </ul>
         </nav>
         <Heading size='large' color='#00739D'>
-          I've Mastered Grommet! hardcode 360px
+          I've Mastered Grommet!
         </Heading>
         <Suspense fallback={<></>}>
           <Switch>

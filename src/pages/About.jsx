@@ -63,29 +63,33 @@ export default function About() {
           full='horizontal'
           margin={{ vertical: '36px' }}
           // style={{ borderRadius: '12px' }}
-          // overflow='auto'
+          overflow='auto'
         >
-          <Box overflow='auto' flex={false} height='540px'>
-            <Text size='16px' style={{ marginBottom: '.5rem' }}>
-              {JSON.stringify(checked)}
-            </Text>
-            <Text size='16px' style={{ marginBottom: '.5rem' }}>
-              {agreement.intro.id}
-            </Text>
-            <Text size='14px' style={{ fontStyle: 'italic' }}>
-              {agreement.intro.en}
-            </Text>
-            <ol>
-              {agreement.terms.map((item, index) => (
-                <li key={index}>
-                  <Text size='16px'>{item.desc.id}</Text>
-                  <br />
-                  <Text size='14px' style={{ fontStyle: 'italic' }}>
-                    {item.desc.en}
-                  </Text>
-                </li>
-              ))}
-            </ol>
+          <Box overflow='auto' height='540px'>
+            <Box flex={false}>
+              <Text size='16px' style={{ marginBottom: '.5rem' }}>
+                {JSON.stringify(checked)}
+              </Text>
+              <Text size='16px' style={{ marginBottom: '.5rem' }}>
+                {agreement.intro.id}
+              </Text>
+              <Text size='14px' style={{ fontStyle: 'italic' }}>
+                {agreement.intro.en}
+              </Text>
+            </Box>
+            <Box flex={false}>
+              <ol>
+                {agreement.terms.map((item, index) => (
+                  <li key={index}>
+                    <Text size='16px'>{item.desc.id}</Text>
+                    <br />
+                    <Text size='14px' style={{ fontStyle: 'italic' }}>
+                      {item.desc.en}
+                    </Text>
+                  </li>
+                ))}
+              </ol>
+            </Box>
             <Box width='100%' flex={false}>
               <CheckBox
                 checked={checked}
