@@ -65,7 +65,7 @@ export default function About() {
           // style={{ borderRadius: '12px' }}
           // overflow='auto'
         >
-          <Box overflow='auto' flex={false}>
+          <Box overflow='auto' flex={false} height='540px'>
             <Text size='16px' style={{ marginBottom: '.5rem' }}>
               {JSON.stringify(checked)}
             </Text>
