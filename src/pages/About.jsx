@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Button, Layer as Dialog, Text, CheckBox } from 'grommet';
-import { FormClose } from 'grommet-icons';
+// import { FormClose } from 'grommet-icons';
 // import agreement from '../constant/agreement';
 
 const agreement = {
