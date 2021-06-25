@@ -65,20 +65,7 @@ export default function About() {
           // style={{ borderRadius: '12px' }}
           // overflow='auto'
         >
-          <Box
-            flex={false}
-            // margin={{ top: '36px' }}
-            pad={{ horizontal: 'large', top: 'large' }}
-            // overflow='scroll'
-          >
-            <FormClose
-              color='status-critical'
-              size='large'
-              onClick={() => setIsOpen(false)}
-              style={{ cursor: 'pointer', alignSelf: 'flex-end' }}
-            />
-          </Box>
-          <Box overflow='auto' flex={false} height='360px'>
+          <Box overflow='auto' flex={false}>
             <Text size='16px' style={{ marginBottom: '.5rem' }}>
               {JSON.stringify(checked)}
             </Text>
